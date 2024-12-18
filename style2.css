@@ -14,7 +14,7 @@ body {
   margin: 10px;
   text-align: center;
   border: 2px solid white;
-  padding: 5px 5px 5px 15px;
+  padding: 5px 0px 0px 15px;
   border-radius: 10px;
   background-color: black;
   
@@ -63,8 +63,54 @@ body {
   font-weight: bold;
 }
 
-h4 {
-  text-shadow: 4px 4px 16px rgb(245, 245, 79);
+.author-name {
+  margin-top: 10px;
+  color: rgb(73, 72, 72);
+}
+
+
+
+/* For screens 640px and larger */
+@media (min-width: 640px) {
+  
+  .calendar {
+    max-width: 320px;
+    
+  }
+
+  .month-name {
+    font-size: 28px;
+    display: block;
+  }
+
+  .days-row div, .dates-row div {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+}
+
+/* For screens 768px and larger */
+@media (min-width: 768px) {
+  .calendar {
+    max-width: 335px;
+    margin: 10px;
+    padding-left: 15px;
+  }
+
+  .month-name {
+    font-size: 30px;
+  }
+
+  .days-row div, .dates-row div {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+  
+  
+
 }
 
 /* Animation Styles */

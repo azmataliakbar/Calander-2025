@@ -11,27 +11,28 @@
   <section>
     
       
-          <div class="">
+          <div class="calender">
           <div class="days-row"></div>
           <div class="dates-row"></div>
           </div>
+          
         
 
     <script>
       // Define the months and days of the week
       const months = [
-        { name: 'January 2025', daysInMonth: 31, firstDay: 2 }, // January (0 for Monday)
-        { name: 'February 2025', daysInMonth: 28, firstDay: 5 }, // February
-        { name: 'March 2025', daysInMonth: 31, firstDay: 5 }, // March
-        { name: 'April 2025', daysInMonth: 30, firstDay: 1 }, // April
-        { name: 'May 2025', daysInMonth: 31, firstDay: 3 }, // May
-        { name: 'June 2025', daysInMonth: 30, firstDay: 6 }, // June
-        { name: 'July 2025', daysInMonth: 31, firstDay: 1 }, // July
-        { name: 'August 2025', daysInMonth: 31, firstDay: 4 }, // August
-        { name: 'September 2025', daysInMonth: 30, firstDay: 0 }, // September
-        { name: 'October 2025', daysInMonth: 31, firstDay: 2 }, // October
-        { name: 'November 2025', daysInMonth: 30, firstDay: 5 }, // November
-        { name: 'December 2025', daysInMonth: 31, firstDay: 0 } // December
+        { name: 'January 2025', daysInMonth: 31, firstDay: 2, author: 'Azmat Ali' }, // January (0 for Monday)
+        { name: 'February 2025', daysInMonth: 28, firstDay: 5, author: 'Azmat Ali'  }, // February
+        { name: 'March 2025', daysInMonth: 31, firstDay: 5, author: 'Azmat Ali'  }, // March
+        { name: 'April 2025', daysInMonth: 30, firstDay: 1, author: 'Azmat Ali'  }, // April
+        { name: 'May 2025', daysInMonth: 31, firstDay: 3, author: 'Azmat Ali'  }, // May
+        { name: 'June 2025', daysInMonth: 30, firstDay: 6, author: 'Azmat Ali'  }, // June
+        { name: 'July 2025', daysInMonth: 31, firstDay: 1, author: 'Azmat Ali'  }, // July
+        { name: 'August 2025', daysInMonth: 31, firstDay: 4, author: 'Azmat Ali'  }, // August
+        { name: 'September 2025', daysInMonth: 30, firstDay: 0, author: 'Azmat Ali'  }, // September
+        { name: 'October 2025', daysInMonth: 31, firstDay: 2, author: 'Azmat Ali'  }, // October
+        { name: 'November 2025', daysInMonth: 30, firstDay: 5, author: 'Azmat Ali'  }, // November
+        { name: 'December 2025', daysInMonth: 31, firstDay: 0, author: 'Azmat Ali'  } // December
       ];
   
       // Define the days of the week
@@ -87,6 +88,14 @@
         }
   
         calendar.appendChild(datesRow);
+
+        // Create and append the author name
+        const authorName = document.createElement('div');
+        authorName.classList.add('author-name');
+        authorName.textContent = `Author: ${monthData.author}`;
+        calendar.appendChild(authorName);
+
+
         return calendar;
       }
   
@@ -137,7 +146,8 @@
     // Continuously generate stars
     setInterval(createSquare, 100);
   </script>
-  <h4>Author: Azmat Ali</h4>
+  
+
 </body>
 </html>
 
